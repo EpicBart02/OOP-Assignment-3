@@ -21,7 +21,7 @@ public abstract class Tile {
     // note that no complex logic like loops or if statements are needed and should not be used
     // work out the correct way of setting the links using object diagrams
 
-    next = prev = null; // this is not correct remove
+    next = prev = this; // this is not correct remove
 
     playersOnTile = new ArrayList<>();
   }
@@ -31,9 +31,10 @@ public abstract class Tile {
     // the object created should be inserted into the linked list as the next tile after prevTile
     // note that no complex logic like loops or if statements are needed and should not be used
     // work out the correct way of setting the links using object diagrams
-
-    prev = next = null; // this is not correct, remove
-    prevTile.next = prevTile.prev = null; // this is not correct, remove    
+    next = prevTile.next;
+    prev = prevTile;
+    prevTile.next = this;
+    next.prev = this;
 
     playersOnTile = new ArrayList<>();
   }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class TierOneTests {
 
   // implement the constructor in Tile so that it sets the next and prev links to this
-  /*@Test
+  @Test
   public void tileConstructionTest_1() {
     // implement the constructor in Tile so that it sets the next and prev links correctly
     DummyTile sut = new DummyTile();
@@ -18,9 +18,9 @@ public class TierOneTests {
     assertEquals(sut, sut.getNext(), "Link to next tile not set correctly");
     assertEquals(sut, sut.getPrev(), "Link to prev tile not set correctly.");
 
-  }*/
+  }
 
-  /*@Test
+  @Test
   public void tileConstructionTest_2() {
     // implement the constructor in Tile so that it sets the next and prev links correctly
     DummyTile sut1 = new DummyTile();
@@ -32,9 +32,9 @@ public class TierOneTests {
     assertEquals(sut2, sut1.getPrev(), "Link to sut1 prev tile not set correctly");
     assertEquals(sut1, sut2.getPrev(), "Link to sut2 prev tile not set correctly");
     assertEquals(sut1, sut2.getNext(), "Link to sut2 next tile not set correctly");
-  }*/
+  }
 
-  /*@Test
+  @Test
   public void tileConstructionTest_3() {
     // implement the constructor in Tile so that it sets the next and prev links correctly
     DummyTile sut1 = new DummyTile();
@@ -46,9 +46,9 @@ public class TierOneTests {
     assertEquals(sut1, sut3.getNext(), "Link to sut3 next tile not set correctly");
     assertEquals(sut2, sut3.getPrev(), "Link to sut3 prev tile not set correctly");
     assertEquals(sut1, sut2.getPrev(), "Link to sut2 prev tile not set correctly");
-  }*/
+  }
 
-  /*@Test
+  @Test
   public void tileConstructionTest_4() {
     // implement the constructor in Tile so that it sets the next and prev links correctly
     DummyTile sut1 = new DummyTile();
@@ -62,9 +62,9 @@ public class TierOneTests {
     assertEquals(sut2, sut1.getPrev(), "Link to sut1 prev tile not set correctly");
     assertEquals(sut3, sut2.getPrev(), "Link to sut2 prev tile not set correctly");
     assertEquals(sut1, sut2.getNext(), "Link to sut2 prev tile not set correctly");
-  }*/
+  }
 
-  /*@Test
+  @Test
   public void tileConstructionTest_5() {
     // implement the constructor in Tile so that it sets the next and prev links correctly
     DummyTile sut1 = new DummyTile();
@@ -81,9 +81,9 @@ public class TierOneTests {
     assertEquals(sut3, sut4.getNext(), "Link to sut4 prev tile not set correctly");
     assertEquals(sut4, sut1.getNext(), "Link to sut1 next tile not set correctly");
     assertEquals(sut4, sut3.getPrev(), "Link to sut3 prev tile not set correctly");
-  }*/
+  }
 
-/*  @Test
+  @Test
   public void tileConstructiontest_6() {
     DummyTile start = new DummyTile();
     ArrayList<Tile> tiles = new ArrayList<>();
@@ -103,7 +103,7 @@ public class TierOneTests {
 
       n = nNew;
     }
-  }*/
+  }
 
 
   /*@Test
