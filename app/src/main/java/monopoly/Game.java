@@ -62,6 +62,17 @@ public class Game {
         Player joined = new HumanPlayer(board.getStartTile(), playerName, ui);
         players.add(joined);
         ui.playerJoined(joined.getName());
+      } else if (playerName != null) {
+        break;
+      }
+    } while (true);
+
+    do {
+      String computerName = ui.promptForNewComputerPlayerName();
+      if (computerName != null && computerName.length() > 0) {
+        Player joined = new ComputerPlayer(board.getStartTile(), computerName, ui);
+        players.add(joined);
+        ui.playerJoined(computerName);
       } else if (players.size() > 1) {
         // we have at least one player so we can start the game
         break;

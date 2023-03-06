@@ -157,6 +157,20 @@ public class ConsoleUi {
     }
   }
 
+  public String promptForNewComputerPlayerName() {
+    System.out.print("Computer Player name (empty when done): ");
+
+
+    try {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, Charset.defaultCharset().name()));
+      return reader.readLine();
+    } catch (IOException e) {
+      e.printStackTrace();
+      return "";
+    }
+  }
+
+
   /**
    * Represents the actions a player can perform.
    */
