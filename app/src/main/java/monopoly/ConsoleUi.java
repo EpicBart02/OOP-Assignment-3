@@ -157,6 +157,11 @@ public class ConsoleUi {
     }
   }
 
+  /**
+   * I created a new prompt for name, specifically for computer players.
+   * I did this so there wouldnt be any confusion as to who's name your inputting.
+   */
+
   public String promptForNewComputerPlayerName() {
     System.out.print("Computer Player name (empty when done): ");
 

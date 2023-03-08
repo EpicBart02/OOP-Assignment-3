@@ -1,5 +1,10 @@
 package monopoly;
 
+/**
+ * Created a computer class for the extra credits.
+ * Works mostly the same as HumanPlayer but its completely automated,
+ * thus not needing any special inputs except input name to work.
+ */
 
 public class ComputerPlayer implements Player {
   private Tile currentTile;
@@ -7,7 +12,10 @@ public class ComputerPlayer implements Player {
   private int funds;
   private ConsoleUi ui = null;
 
-  
+  /**
+  * Sets the computer player values.
+  *
+  */
 
   public ComputerPlayer(Tile startTile, String name, ConsoleUi ui) {
     this.name = name;
@@ -37,6 +45,11 @@ public class ComputerPlayer implements Player {
     currentTile.stoppedOn(this);
   }
 
+  /**
+  * I decided to make this AI only buy property if their funds are over 300 credits,
+  * otherwise they just move.
+  */
+
   @Override
   public boolean yourTurn(Dice d1, Dice d2) {
     if (funds <= 300) {
@@ -46,8 +59,7 @@ public class ComputerPlayer implements Player {
       final int steps2 = d2.getValue();
       ui.playerMoves(getName(), steps1, steps2);
       move(steps1 + steps2);
-    }
-    else if(funds >300) {
+    } else if (funds > 300) {
       if (currentTile.buy(this)) {
         ui.playerBuysProperty(getName(), currentTile.toString());
       }
@@ -57,7 +69,7 @@ public class ComputerPlayer implements Player {
       final int steps2 = d2.getValue();
       ui.playerMoves(getName(), steps1, steps2);
       move(steps1 + steps2);
-    }
+    } 
     return true;
   }
   

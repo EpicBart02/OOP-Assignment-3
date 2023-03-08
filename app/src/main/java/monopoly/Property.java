@@ -53,7 +53,7 @@ public class Property extends Tile {
     } else {
       return false;
     }
-   }
+  }
 
   /**
    * Just sets the player as the owner.
